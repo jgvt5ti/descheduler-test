@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:1.19.6
-          imagePullPolicy: IfNotPresent
+          image: nginx:1.27.5
           ports:
             - containerPort: 80
       topologySpreadConstraints:
@@ -26,6 +25,6 @@ spec:
           whenUnsatisfiable: ScheduleAnyway
           labelSelector:
             matchLabels:
-              app: mx-apis
+              app: nginx
           matchLabelKeys:
             - pod-template-hash
