@@ -15,6 +15,9 @@ data:
           args:
             constraints:
             - ScheduleAnyway
+            namespaces:
+              include:
+              - "te-st"
             labelSelector:
               matchLabels:
                 app: nginx
